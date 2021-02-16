@@ -6,6 +6,9 @@ PostgreSQL Logical replication does not support DDL replication.So we can use th
 
 ## Usage
 git clone https://github.com/tanveermunavar/pg_ddl_miner.git
+
 export GOPATH=\$(go env GOPATH)
+
 /bin/go get -u github.com/lib/pq
+
 /bin/go run logical_replicator.go -shost <source_host_ip> -sdatabase <source_database> -thost <target_host_ip> -tdatabase <target_database>
