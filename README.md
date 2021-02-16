@@ -5,7 +5,9 @@ Scripts to setup DDL logging in the PostgreSQL database using Event Triggers and
 PostgreSQL Logical replication does not support DDL replication.So we can use the Events triggers to capture the DDL commands in the source and replicate it to the target replication instance. 
 
 ## Usage
-git clone https://github.com/tanveermunavar/pg_ddl_miner.git
+git clone https://github.com/tanveermunavar/postgres-ddl-miner.git
+
+cd postgres-ddl-miner/
 
 psql -X -Aqt -h <source_host_ip> -d <source_database> -v ON_ERROR_STOP=1 -f setup_ddl_logging.sql
 
